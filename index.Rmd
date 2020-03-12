@@ -1,0 +1,29 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(shiny)
+library(readr)
+
+my_url <-"https://raw.githubusercontent.com/vidyasagarbhargava/datasets/master/mtcars_dataset.csv"
+
+confirmed <- read_csv(my_url)
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+print(confirmed)
+```
+
